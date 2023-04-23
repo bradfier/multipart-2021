@@ -1,13 +1,24 @@
-# Multipart [![Build Status](https://travis-ci.org/abonander/multipart.svg?branch=master)](https://travis-ci.org/abonander/multipart) [![On Crates.io](https://img.shields.io/crates/v/multipart.svg)](https://crates.io/crates/multipart)
+# Multipart 2021 [![On Crates.io](https://img.shields.io/crates/v/multipart-2021.svg)](https://crates.io/crates/multipart-2021)
 
 Client- and server-side abstractions for HTTP file uploads (POST requests with  `Content-Type: multipart/form-data`).
 
 Supports several different (**sync**hronous API) HTTP crates. 
 **Async**hronous (i.e. `futures`-based) API support will be provided by [multipart-async].
 
-##### Minimum supported Rust version: 1.36.0
+## About the fork
 
-##### Maintenance Status: Passive
+`multipart-2021` is a fork of [the original](https://github.com/abonander/multipart) which has now been archived.
+
+The fork only updates the library to support Rust 2018 and 2021 edition changes, no changes or improvements to the API are intended.
+
+You can rebind your import of `multipart-2021` so that all the examples continue to work as normal:
+```rust
+use multipart_2021 as multipart;
+```
+
+##### Minimum supported Rust version: 1.56.0
+
+##### Maintenance Status: Archived
 
 As the web ecosystem in Rust moves towards asynchronous APIs, the need for this crate in synchronous
 API form becomes dubious. This crate in its current form is usable enough, so as of June 2020 it

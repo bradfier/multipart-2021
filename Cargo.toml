@@ -1,17 +1,20 @@
 [package]
-name = "multipart"
+name = "multipart-2021"
 
-version = "0.18.0"
+version = "0.19.0"
 
-authors = ["Austin Bonander <austin.bonander@gmail.com>"]
+authors = [
+    "Austin Bonander <austin.bonander@gmail.com>",
+    "Richard Bradfield <bradfier@fstab.me>"
+]
 
 description = "A backend-agnostic extension for HTTP libraries that provides support for POST multipart/form-data requests on both client and server."
 
 keywords = ["form-data", "hyper", "iron", "http", "upload"]
 
-repository = "http://github.com/abonander/multipart"
+repository = "http://github.com/bradfier/multipart-2021"
 
-documentation = "http://docs.rs/multipart/"
+documentation = "http://docs.rs/multipart-2021/"
 
 license = "MIT OR Apache-2.0"
 
