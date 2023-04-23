@@ -21,7 +21,7 @@ pub struct ClientRequest {
 }
 
 #[cfg(feature = "client")]
-impl ::client::HttpRequest for ClientRequest {
+impl crate::client::HttpRequest for ClientRequest {
     type Stream = HttpBuffer;
     type Error = io::Error;
 
@@ -103,7 +103,7 @@ impl Write for HttpBuffer {
 }
 
 #[cfg(feature = "client")]
-impl ::client::HttpStream for HttpBuffer {
+impl crate::client::HttpStream for HttpBuffer {
     type Request = ClientRequest;
     type Response = HttpBuffer;
     type Error = io::Error;
@@ -165,7 +165,7 @@ impl<'a> Read for ServerRequest<'a> {
 }
 
 #[cfg(feature = "server")]
-impl<'a> ::server::HttpRequest for ServerRequest<'a> {
+impl<'a> crate::server::HttpRequest for ServerRequest<'a> {
     type Body = Self;
 
     fn multipart_boundary(&self) -> Option<&str> { Some(self.boundary) }

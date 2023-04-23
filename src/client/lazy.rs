@@ -79,10 +79,6 @@ impl<'a> Into<io::Error> for LazyError<'a, io::Error> {
 }
 
 impl<'a, E: Error> Error for LazyError<'a, E> {
-    fn description(&self) -> &str {
-        self.error.description()
-    }
-
     fn cause(&self) -> Option<&dyn Error> {
         Some(&self.error)
     }
@@ -522,7 +518,7 @@ mod hyper {
             };
 
             mut_fn(client.post(url))
-                .header(::client::hyper::content_type(fields.boundary()))
+                .header(crate::client::hyper::content_type(fields.boundary()))
                 .body(fields.to_body())
                 .send()
         }
