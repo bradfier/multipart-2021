@@ -67,7 +67,7 @@ showing how to use `multipart` on a Rocket server: [examples/rocket.rs](examples
 
 ## ⚡ Powered By ⚡
 
-### [buf_redux ![](https://img.shields.io/crates/v/buf_redux.svg)](https://crates.io/crates/buf_redux)
+### [buffer-redux ![](https://img.shields.io/crates/v/buffer-redux.svg)](https://crates.io/crates/buffer-redux)
 
 Customizable drop-in `std::io::BufReader` replacement, created to be used in this crate.
 Needed because it can read more bytes into the buffer without the buffer being empty, necessary
